@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(207, 13%, 17%);
+  --muted: hsl(210, 40%, 98%);
+  --muted-foreground: hsl(215, 13.8%, 34.1%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(207, 13%, 17%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(207, 13%, 17%);
+  --border: hsl(214, 32%, 91%);
+  --input: hsl(214, 32%, 91%);
+  --primary: hsl(207, 90%, 61%);
+  --primary-foreground: hsl(210, 40%, 98%);
+  --secondary: hsl(164, 72%, 67%);
+  --secondary-foreground: hsl(207, 13%, 17%);
+  --accent: hsl(36, 100%, 67%);
+  --accent-foreground: hsl(207, 13%, 17%);
+  --destructive: hsl(0, 84%, 60%);
+  --destructive-foreground: hsl(60, 9.1%, 97.8%);
+  --ring: hsl(207, 90%, 61%);
+  --radius: 0.75rem;
+
+  /* VHCC Custom Colors */
+  --trust-blue: hsl(207, 90%, 61%);
+  --healing-green: hsl(164, 72%, 67%);
+  --warm-amber: hsl(36, 100%, 67%);
+  --slate-black: hsl(215, 25%, 27%);
+  --medical-red: hsl(0, 84%, 60%);
+  
+  /* Neumorphism shadows */
+  --neuro-shadow: 4px 4px 10px rgba(0, 0, 0, 0.05), -2px -2px 6px rgba(255, 255, 255, 0.8);
+  --neuro-inset: inset 2px 2px 5px rgba(0, 0, 0, 0.05), inset -2px -2px 5px rgba(255, 255, 255, 0.8);
+}
+
+.dark {
+  --background: hsl(240, 10%, 3.9%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(240, 3.7%, 15.9%);
+  --muted-foreground: hsl(240, 5%, 64.9%);
+  --popover: hsl(240, 10%, 3.9%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(240, 10%, 3.9%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(240, 3.7%, 15.9%);
+  --input: hsl(240, 3.7%, 15.9%);
+  --primary: hsl(207, 90%, 61%);
+  --primary-foreground: hsl(210, 40%, 98%);
+  --secondary: hsl(164, 72%, 67%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(36, 100%, 67%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(240, 4.9%, 83.9%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-muted text-slate-black;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  }
+}
+
+@layer utilities {
+  .shadow-neuro {
+    box-shadow: var(--neuro-shadow);
+  }
+  
+  .shadow-neuro-inset {
+    box-shadow: var(--neuro-inset);
+  }
+  
+  .text-trust-blue {
+    color: var(--trust-blue);
+  }
+  
+  .bg-trust-blue {
+    background-color: var(--trust-blue);
+  }
+  
+  .text-healing-green {
+    color: var(--healing-green);
+  }
+  
+  .bg-healing-green {
+    background-color: var(--healing-green);
+  }
+  
+  .text-warm-amber {
+    color: var(--warm-amber);
+  }
+  
+  .bg-warm-amber {
+    background-color: var(--warm-amber);
+  }
+  
+  .text-slate-black {
+    color: var(--slate-black);
+  }
+  
+  .bg-slate-black {
+    background-color: var(--slate-black);
+  }
+  
+  .text-medical-red {
+    color: var(--medical-red);
+  }
+  
+  .bg-medical-red {
+    background-color: var(--medical-red);
+  }
+}

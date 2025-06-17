@@ -13,7 +13,7 @@ export default function Header() {
     { id: "scheduling", label: "Scheduling", path: "/scheduling" },
     { id: "consultation", label: "Consultation", path: "/consultation" },
     { id: "kyc", label: "KYC", path: "/kyc" },
-    { id: "nurse-form", label: "Nurs form", path: "/nurse-form" },
+    { id: "nurse-form", label: "Nurse form", path: "/nurse-form" },
   ];
 
   return (

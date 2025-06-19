@@ -13,6 +13,13 @@ import Dashboard from "./pages/Dashboard";
 import KYC from "./pages/KYC";
 import NurseForm from "./pages/NurseForm";
 import RegistrationWeb from "@/pages/Registration-Web.tsx";
+import AdminConfiguration from "@/pages/AdminConfiguration.tsx";
+import ReceptionistPortal from "@/pages/ReceptionistPortal.tsx";
+import DoctorAvailability from "@/pages/DoctorAvailability.tsx";
+import EMRVisitNote from "@/pages/EMRVisitNote.tsx";
+import ProfileSettings from "@/pages/ProfileSettings.tsx";
+import NotificationsCenter from "@/pages/NotificationsCenter.tsx";
+import PostVisitFeedback from "@/pages/PostVisitFeedback.tsx";
 
 function Router() {
   return (
@@ -25,6 +32,15 @@ function Router() {
       <Route path="/dashboard" component={Dashboard} />
       <Route path="/kyc" component={KYC} />
       <Route path="/nurse-form" component={NurseForm} />
+
+     <Route path="/receptionist" component={ReceptionistPortal} />
+     <Route path="/doctor-availability" component={DoctorAvailability} />
+     <Route path="/emr-visit-note" component={EMRVisitNote} />
+     <Route path="/profile-settings" component={ProfileSettings} />
+     <Route path="/notifications" component={NotificationsCenter} />
+     <Route path="/feedback" component={PostVisitFeedback} />
+     <Route path="/admin" component={AdminConfiguration} />
+
     </Switch>
   );
 }

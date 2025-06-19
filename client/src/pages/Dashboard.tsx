@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -295,7 +294,9 @@ export default function Dashboard() {
                 </div>
               </div>
               
-              <Button variant="outline" className="w-full mt-4 rounded-xl">
+              <Button variant="outline" className="w-full mt-4 rounded-xl"
+                      onClick={() => setLocation("/profile-settings")}
+              >
                 <Settings size={16} className="mr-2" />
                 Edit Profile
               </Button>

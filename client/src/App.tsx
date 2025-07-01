@@ -20,6 +20,7 @@ import EMRVisitNote from "@/pages/EMRVisitNote.tsx";
 import ProfileSettings from "@/pages/ProfileSettings.tsx";
 import NotificationsCenter from "@/pages/NotificationsCenter.tsx";
 import PostVisitFeedback from "@/pages/PostVisitFeedback.tsx";
+import SearchConsultation from "@/pages/SearchConsultation.tsx";
 
 function Router() {
   return (
@@ -36,6 +37,7 @@ function Router() {
      <Route path="/receptionist" component={ReceptionistPortal} />
      <Route path="/doctor-availability" component={DoctorAvailability} />
      <Route path="/emr-visit-note" component={EMRVisitNote} />
+     <Route path="/search-consultation" component={SearchConsultation} />
      <Route path="/profile-settings" component={ProfileSettings} />
      <Route path="/notifications" component={NotificationsCenter} />
      <Route path="/feedback" component={PostVisitFeedback} />

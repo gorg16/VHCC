@@ -94,7 +94,7 @@ export default function EMRVisitNote() {
           <CardContent className="p-6">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <div>
-                <Label htmlFor="date-from">Date From</Label>
+                <Label htmlFor="date-from">Visit Date From</Label>
                 <Input
                     id="date-from"
                     type="date"
@@ -104,7 +104,7 @@ export default function EMRVisitNote() {
                 />
               </div>
               <div>
-                <Label htmlFor="date-to">Date To</Label>
+                <Label htmlFor="date-to">Visit Date To</Label>
                 <Input
                     id="date-to"
                     type="date"

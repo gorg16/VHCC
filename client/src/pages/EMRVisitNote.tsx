@@ -7,8 +7,12 @@ import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Upload, FileText, Image, Download, Save, AlertTriangle, Clock } from "lucide-react";
+import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select.tsx";
 
 export default function EMRVisitNote() {
+  const [visitDate, setVisitDate] = useState("2025-07-15");
+  const [specialty, setSpecialty] = useState('Cardiology');
+
   const [visitNote, setVisitNote] = useState({
     chiefComplaint: "",
     historyOfPresentIllness: "",
@@ -84,6 +88,40 @@ export default function EMRVisitNote() {
           <h1 className="text-3xl font-bold text-slate-black mb-2">EMR Visit Note & File Upload</h1>
           <p className="text-gray-600">Structured clinical documentation and file management</p>
         </div>
+
+        <Card className="shadow-neuro mb-6">
+          <CardContent className="p-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <Label htmlFor="visit-date">Visit Date</Label>
+                <Input
+                    id="visit-date"
+                    type="date"
+                    value={visitDate}
+                    onChange={(e) => setVisitDate(e.target.value)}
+                    className="rounded-xl"
+                />
+              </div>
+              <div>
+                <Label htmlFor="specialty-select">Specialty</Label>
+                <Select value={specialty} onValueChange={setSpecialty}>
+                  <SelectTrigger className="rounded-xl">
+                    <SelectValue placeholder="Select specialty" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="Cardiology">Cardiology</SelectItem>
+                    <SelectItem value="Internal Medicine">Internal Medicine</SelectItem>
+                    <SelectItem value="Dermatology">Dermatology</SelectItem>
+                    <SelectItem value="Orthopedics">Orthopedics</SelectItem>
+                    <SelectItem value="Neurology">Neurology</SelectItem>
+                    <SelectItem value="Pediatrics">Pediatrics</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+
 
         <Tabs defaultValue="visit-note" className="space-y-6">
           <TabsList className="grid w-full grid-cols-4">

@@ -10,7 +10,8 @@ import { Upload, FileText, Image, Download, Save, AlertTriangle, Clock } from "l
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select.tsx";
 
 export default function EMRVisitNote() {
-  const [visitDate, setVisitDate] = useState("2025-07-15");
+  const [dateFrom, setDateFrom] = useState("2025-07-01");
+  const [dateTo, setDateTo] = useState("2025-07-31");
   const [specialty, setSpecialty] = useState('Cardiology');
 
   const [visitNote, setVisitNote] = useState({
@@ -91,14 +92,24 @@ export default function EMRVisitNote() {
 
         <Card className="shadow-neuro mb-6">
           <CardContent className="p-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <div>
-                <Label htmlFor="visit-date">Visit Date</Label>
+                <Label htmlFor="date-from">Date From</Label>
                 <Input
-                    id="visit-date"
+                    id="date-from"
                     type="date"
-                    value={visitDate}
-                    onChange={(e) => setVisitDate(e.target.value)}
+                    value={dateFrom}
+                    onChange={(e) => setDateFrom(e.target.value)}
+                    className="rounded-xl"
+                />
+              </div>
+              <div>
+                <Label htmlFor="date-to">Date To</Label>
+                <Input
+                    id="date-to"
+                    type="date"
+                    value={dateTo}
+                    onChange={(e) => setDateTo(e.target.value)}
                     className="rounded-xl"
                 />
               </div>
@@ -109,6 +120,7 @@ export default function EMRVisitNote() {
                     <SelectValue placeholder="Select specialty" />
                   </SelectTrigger>
                   <SelectContent>
+                    <SelectItem value="E. N. T">E. N. T</SelectItem>
                     <SelectItem value="Cardiology">Cardiology</SelectItem>
                     <SelectItem value="Internal Medicine">Internal Medicine</SelectItem>
                     <SelectItem value="Dermatology">Dermatology</SelectItem>

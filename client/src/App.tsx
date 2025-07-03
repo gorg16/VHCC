@@ -21,6 +21,7 @@ import ProfileSettings from "@/pages/ProfileSettings.tsx";
 import NotificationsCenter from "@/pages/NotificationsCenter.tsx";
 import PostVisitFeedback from "@/pages/PostVisitFeedback.tsx";
 import SearchConsultation from "@/pages/SearchConsultation.tsx";
+import DoctorConsultation from "@/pages/DoctorConsultation.tsx";
 
 function Router() {
   return (
@@ -40,6 +41,7 @@ function Router() {
      <Route path="/search-consultation" component={SearchConsultation} />
      <Route path="/profile-settings" component={ProfileSettings} />
      <Route path="/notifications" component={NotificationsCenter} />
+     <Route path="/doctor-consultation" component={DoctorConsultation} />
      <Route path="/feedback" component={PostVisitFeedback} />
      <Route path="/admin" component={AdminConfiguration} />
 

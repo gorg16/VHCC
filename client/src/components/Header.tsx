@@ -1,6 +1,7 @@
 import { useLocation } from "wouter";
 import { User } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import DoctorConsultation from "@/pages/DoctorConsultation.tsx";
 
 export default function Header() {
   const [location, setLocation] = useLocation();
@@ -14,7 +15,8 @@ export default function Header() {
     { id: "kyc", label: "KYC", path: "/kyc" },
     { id: "nurse-form", label: "Nurse Form", path: "/nurse-form" },
     { id: "admin", label: "Admin", path: "/admin" },
-    { id: "emr", label: "EMR", path: "/emr-visit-note" },
+    // { id: "emr", label: "EMR", path: "/emr-visit-note" },
+    { id: "doctor-consultation", label: "Doctor Consultation", path: "/doctor-consultation" },
     // { id: "search-consultation", label: "Search Consultation", path: "/search-consultation" },
     { id: "receptionist-portal", label: "Receptionist Portal", path: "/receptionist" },
     { id: "doctor-availability", label: "Doctor Availability", path: "/doctor-availability" },
